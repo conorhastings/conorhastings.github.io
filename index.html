@@ -5,50 +5,101 @@
         <title>conor hastings</title>
     </head>
 
-    <body 
-        style='
-            font-family: monaco, Consolas, Lucida Console, monospace;
-            background-image: url("./hat.png");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            background-position: 30vw 55vh;
-        '
-        >
-        <h2>
-            hi, i am conor hastings, a web developer/software engineer/some other name that means i make stuff on the internet
-        </h2>
-        <p>i like javascript, also functional programming, i mostly write react things now, but i'll try anything</p>
-        <div>
-            <a href="http://github.com/conorhastings">github</a> | 
-            <a href="http://twitter.com/stillconor">twitter</a>
-            <p>
-                (imagine the twitter link has a bird icon and the github link has the github picture thingy, i don't feel like finding the images and putting them in, 
-                imagination is a key skill in life and you should learn it now if you have not. you're welcome.)
-            </p>
-            <h2>some things i've worked on that i like</h2>
-            <ul>
-                <li><a href="https://github.com/conorhastings/redux-test-recorder">redux test recorder</a> <a href="http://conor.rodeo/redux-test-recorder/demo/">(demo)</a><a href="http://conor.rodeo/todo-mvc-redux-test-recorder">(another demo)</a><a href="https://www.youtube.com/watch?v=It7jU4uKxSk">(my talk at react europe)</a></li>
-                <li><a href="https://github.com/conorhastings/react-syntax-highlighter">react syntax highlighter</a> <a href="http://conor.rodeo/react-syntax-highlighter/demo/">(demo)</a></li>
-                <li><a href="https://github.com/socialtables/react-user-tour">react user tour</a> <a href="http://socialtables.github.io/react-user-tour/demo/">(demo)</a></li>
-                <li><a href="https://github.com/conorhastings/react-emoji-react">react emoji react</a> <a href="http://conor.rodeo/react-emoji-react/demo/">(demo)</a></li>
-                <li><a href="https://github.com/socialtables/react-image-fallback">react image fallback</a></li>
-                <li><a href="https://github.com/conorhastings/redux-session-storage">redux session storage</a></li>
-                <li><a href="https://github.com/conorhastings/slack-to-tweet">slack to tweet</a></li>
-            </ul>
+    <body>
+        <div id='frameworks' style='font-family: monaco, Consolas, Lucida Console, monospace;'>
+            <div>
+                In order to satisfy all purveyors of my homepage, you can choose to view in a varity of frameworks:
+            </div>
+            <a href="#html">just html</a> |
+            <a href="#vanilla">vanillla js</a> |
+            <a href="#react">react</a> | 
+            <a href="#psow">put stuff on website</a>
         </div>
+        <div id='app'>
+            <div style='font-family: monaco, Consolas, Lucida Console, monospace;'>
+                <h2>
+                    hi, i am conor hastings, a web developer/software engineer/some other name that means i make stuff on the internet
+                </h2>
+                <p>i like javascript, also functional programming, i mostly write react things now, but i'll try anything</p>
+                <div>
+                    <a href="http://github.com/conorhastings">github</a> | 
+                    <a href="http://twitter.com/stillconor">twitter</a>
+                    <p>
+                        (imagine the twitter link has a bird icon and the github link has the github picture thingy, i don't feel like finding the images and putting them in, 
+                        imagination is a key skill in life and you should learn it now if you have not. you're welcome.)
+                    </p>
+                    <h2>some things i've worked on that i like</h2>
+                    <ul>
+                        <li><a href="https://github.com/conorhastings/redux-test-recorder">redux test recorder</a> <a href="http://conor.rodeo/redux-test-recorder/demo/">(demo)</a><a href="http://conor.rodeo/todo-mvc-redux-test-recorder">(another demo)</a><a href="https://www.youtube.com/watch?v=It7jU4uKxSk">(my talk at react europe)</a></li>
+                        <li><a href="https://github.com/conorhastings/react-syntax-highlighter">react syntax highlighter</a> <a href="http://conor.rodeo/react-syntax-highlighter/demo/">(demo)</a></li>
+                        <li><a href="https://github.com/socialtables/react-user-tour">react user tour</a> <a href="http://socialtables.github.io/react-user-tour/demo/">(demo)</a></li>
+                        <li><a href="https://github.com/conorhastings/react-emoji-react">react emoji react</a> <a href="http://conor.rodeo/react-emoji-react/demo/">(demo)</a></li>
+                        <li><a href="https://github.com/socialtables/react-image-fallback">react image fallback</a></li>
+                        <li><a href="https://github.com/socialtables/redux-unhandled-action">redux unhandled action</a></li>
+                        <li><a href="https://github.com/conorhastings/react-component-demo">react component demo</a><a href="http://conor.rodeo/react-component-demo"> (demo)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id='scripts'></div>
         <script>
-            function removeOrRestoreBackgroundImage() {
-                var tooSmall = window.innerWidth < 1000 || window.innerHeight < 400;
-                if (tooSmall && document.body.style.backgroundImage !== "") {
-                    document.body.style.backgroundImage = "";
+            document.getElementById('frameworks').addEventListener('click', function(e) {
+                if (e.target.href) {
+                    switch (e.target.href.split('#')[1]) {
+                        case 'html': {
+                            document.getElementById('scripts').innerHTML = '';
+                            document.getElementById('app').innerHTML = `
+<div style='font-family: monaco, Consolas, Lucida Console, monospace;'>
+    <h2>
+        hi, i am conor hastings, a web developer/software engineer/some other name that means i make stuff on the internet
+    </h2>
+    <p>i like javascript, also functional programming, i mostly write react things now, but i'll try anything</p>
+    <div>
+        <a href="http://github.com/conorhastings">github</a> | 
+        <a href="http://twitter.com/stillconor">twitter</a>
+        <p>
+            (imagine the twitter link has a bird icon and the github link has the github picture thingy, i don't feel like finding the images and putting them in, 
+            imagination is a key skill in life and you should learn it now if you have not. you're welcome.)
+        </p>
+        <h2>some things i've worked on that i like</h2>
+        <ul>
+            <li><a href="https://github.com/conorhastings/redux-test-recorder">redux test recorder</a> <a href="http://conor.rodeo/redux-test-recorder/demo/">(demo)</a><a href="http://conor.rodeo/todo-mvc-redux-test-recorder">(another demo)</a><a href="https://www.youtube.com/watch?v=It7jU4uKxSk">(my talk at react europe)</a></li>
+            <li><a href="https://github.com/conorhastings/react-syntax-highlighter">react syntax highlighter</a> <a href="http://conor.rodeo/react-syntax-highlighter/demo/">(demo)</a></li>
+            <li><a href="https://github.com/socialtables/react-user-tour">react user tour</a> <a href="http://socialtables.github.io/react-user-tour/demo/">(demo)</a></li>
+            <li><a href="https://github.com/conorhastings/react-emoji-react">react emoji react</a> <a href="http://conor.rodeo/react-emoji-react/demo/">(demo)</a></li>
+            <li><a href="https://github.com/socialtables/react-image-fallback">react image fallback</a></li>
+            <li><a href="https://github.com/socialtables/redux-unhandled-action">redux unhandled action</a></li>
+            <li><a href="https://github.com/conorhastings/react-component-demo">react component demo</a><a href="http://conor.rodeo/react-component-demo"> (demo)</a></li>
+        </ul>
+    </div>
+</div>
+                            `    
+                            break;
+                        }
+                        case 'react': {
+                            document.getElementById('scripts').innerHTML = '';
+                            const script = document.createElement('script');
+                            script.src = './dist/react.js';
+                            document.getElementById('scripts').appendChild(script);
+                            break;
+                        }
+                        case 'vanilla': {
+                            document.getElementById('scripts').innerHTML = '';
+                            const script = document.createElement('script');
+                            script.src = './vanilla/index.js';
+                            document.getElementById('scripts').appendChild(script);
+                            break;
+                        }
+                        case 'psow': {
+                            document.getElementById('scripts').innerHTML = '';
+                            const script = document.createElement('script');
+                            script.src = './dist/put-stuff-on-website.js';
+                            document.getElementById('scripts').appendChild(script);
+                            break;
+                        }
+                    }
                 }
-                else if (!tooSmall && document.body.style.backgroundImage === "") {
-                    document.body.style.backgroundImage = 'url("./hat.png")';
-                }
-            }
-            removeOrRestoreBackgroundImage();
-            window.addEventListener('resize', removeOrRestoreBackgroundImage);
+            });
         </script>
     </body>
-
 </html>

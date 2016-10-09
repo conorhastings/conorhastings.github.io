@@ -1,0 +1,1 @@
+module.exports = require('./generate-webpack-config')('put-stuff-on-website');
