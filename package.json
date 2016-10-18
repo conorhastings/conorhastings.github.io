@@ -4,7 +4,7 @@
   "description": "",
   "main": "index-react.js",
   "scripts": {
-    "build": "webpack -p --progress --config webpack.react.config.js && webpack -p --progress --config webpack.psow.config.js"
+    "build": "webpack -p --progress --config webpack.react.config.js && webpack -p --progress --config webpack.psow.config.js && webpack -p --progress --config webpack.code.config.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "put-stuff-on-website": "^1.1.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
+    "react-syntax-highlighter": "^2.10.0",
     "webpack": "^1.13.2"
   }
 }
