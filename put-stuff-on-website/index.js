@@ -67,11 +67,14 @@ function Project({ link, name, demoLink, extra }) {
     ]
   }
   if(demoLink) {
-    component.children.push({
-      tagName: 'a',
-      props: { href: demoLink },
-      children: ' (demo)'
-    });
+    component.children.push(
+      { tagName: 'span', children: ' '},
+      {
+        tagName: 'a',
+        props: { href: demoLink },
+        children: ' (demo)'
+      }
+    );
   } 
   if (extra) {
     component.children.push(extra);
