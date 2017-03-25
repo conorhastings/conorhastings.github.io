@@ -3,33 +3,28 @@
 
     <head>
         <title>conor hastings</title>
+        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     </head>
 
-    <body>
-        <div id='frameworks' style='font-family: monaco, Consolas, Lucida Console, monospace;'>
-            <div>
-                In order to satisfy all purveyors of my homepage, you can choose to view in a varity of frameworks:
-            </div>
-            <a href="#html">just html</a> |
-            <a href="#vanilla">vanillla js</a> |
-            <a href="#react">react</a> | 
-            <a href="#psow">put stuff on website</a>
-        </div>
+    <body style='background-image:url("./background.png")'>
         <div id='app'>
-            <div style='font-family: monaco, Consolas, Lucida Console, monospace;'>
-                <h2>
-                    hi, i am conor hastings, a web developer/software engineer/some other name that means i make stuff on the internet
-                </h2>
-                <p>i like javascript, also functional programming, i mostly write react things now, but i'll try anything</p>
+            <div style="font-family: 'Permanent Marker', cursive;">
+                <h1 style='background:mistyrose;color:cadetblue;'>
+                    hi, i am conor hastings and this is my personal internet landing page. i hope if you like it, if you don't, that's ok too!                
+                    <sub style='background: LightCoral;color:mistyrose;font-size:22px'>fun fact, i love brands</sub>
+
+                </h1>
                 <div>
-                    <a href="http://github.com/conorhastings">github</a> | 
-                    <a href="http://twitter.com/stillconor">twitter</a>
-                    <p>
+                    <div style="background: Gainsboro">
+                        <a href="http://github.com/conorhastings">github</a> | 
+                        <a href="http://twitter.com/stillconor">twitter</a>
+                    </div>
+                    <p style='background: navy;color:powderblue;'>
                         (imagine the twitter link has a bird icon and the github link has the github picture thingy, i don't feel like finding the images and putting them in, 
                         imagination is a key skill in life and you should learn it now if you have not. you're welcome.)
                     </p>
-                    <h2>some things i've worked on that i like</h2>
-                    <ul>
+                    <h2 style="background: MediumAquamarine; color:azure;">some things i've worked on that i like, you might too!</h2>
+                    <ul style="background: LightPink;opacity:0.8;">
                         <li><a href="https://github.com/conorhastings/redux-test-recorder">redux test recorder</a> <a href="http://conor.rodeo/redux-test-recorder/demo/">(demo)</a><a href="http://conor.rodeo/todo-mvc-redux-test-recorder">(another demo)</a><a href="https://www.youtube.com/watch?v=It7jU4uKxSk">(my talk at react europe)</a></li>
                         <li><a href="https://github.com/conorhastings/react-syntax-highlighter">react syntax highlighter</a> <a href="http://conor.rodeo/react-syntax-highlighter/demo/">(demo)</a></li>
                         <li><a href="https://github.com/socialtables/react-user-tour">react user tour</a> <a href="http://socialtables.github.io/react-user-tour/demo/">(demo)</a></li>
@@ -41,69 +36,14 @@
                     </ul>
                 </div>
             </div>
+            <img src="./head.png" style="position: fixed;bottom: 0;right:40px" id="head"/>
         </div>
-        <div id ='code'></div>
-        <div id='scripts'></div>
-        <script>
-            document.getElementById('frameworks').addEventListener('click', function(e) {
-                if (e.target.href) {
-                    switch (e.target.href.split('#')[1]) {
-                        case 'html': {
-                            document.getElementById('scripts').innerHTML = '';
-                            document.getElementById('app').innerHTML = `
-<div style='font-family: monaco, Consolas, Lucida Console, monospace;'>
-    <h2>
-        hi, i am conor hastings, a web developer/software engineer/some other name that means i make stuff on the internet
-    </h2>
-    <p>i like javascript, also functional programming, i mostly write react things now, but i'll try anything</p>
-    <div>
-        <a href="http://github.com/conorhastings">github</a> | 
-        <a href="http://twitter.com/stillconor">twitter</a>
-        <p>
-            (imagine the twitter link has a bird icon and the github link has the github picture thingy, i don't feel like finding the images and putting them in, 
-            imagination is a key skill in life and you should learn it now if you have not. you're welcome.)
-        </p>
-        <h2>some things i've worked on that i like</h2>
-        <ul>
-            <li><a href="https://github.com/conorhastings/redux-test-recorder">redux test recorder</a> <a href="http://conor.rodeo/redux-test-recorder/demo/">(demo)</a><a href="http://conor.rodeo/todo-mvc-redux-test-recorder">(another demo)</a><a href="https://www.youtube.com/watch?v=It7jU4uKxSk">(my talk at react europe)</a></li>
-            <li><a href="https://github.com/conorhastings/react-syntax-highlighter">react syntax highlighter</a> <a href="http://conor.rodeo/react-syntax-highlighter/demo/">(demo)</a></li>
-            <li><a href="https://github.com/socialtables/react-user-tour">react user tour</a> <a href="http://socialtables.github.io/react-user-tour/demo/">(demo)</a></li>
-            <li><a href="https://github.com/conorhastings/react-emoji-react">react emoji react</a> <a href="http://conor.rodeo/react-emoji-react/demo/">(demo)</a></li>
-            <li><a href="https://github.com/socialtables/react-image-fallback">react image fallback</a> <a href="http://socialtables.github.io/react-image-fallback/demo/">(demo)</a></li>
-            <li><a href="https://github.com/socialtables/redux-unhandled-action">redux unhandled action</a></li>
-            <li><a href="https://github.com/conorhastings/react-component-demo">react component demo</a><a href="http://conor.rodeo/react-component-demo"> (demo)</a></li>
-            <li><a href="https://github.com/conorhastings/apply-loader-after-first-build-webpack-plugin">apply loader after first build webpack plugin</a></li>
-        </ul>
-    </div>
-</div>
-                            `    
-                            break;
-                        }
-                        case 'react': {
-                            document.getElementById('scripts').innerHTML = '';
-                            const script = document.createElement('script');
-                            script.src = './dist/react.js';
-                            document.getElementById('scripts').appendChild(script);
-                            break;
-                        }
-                        case 'vanilla': {
-                            document.getElementById('scripts').innerHTML = '';
-                            const script = document.createElement('script');
-                            script.src = './vanilla/index.js';
-                            document.getElementById('scripts').appendChild(script);
-                            break;
-                        }
-                        case 'psow': {
-                            document.getElementById('scripts').innerHTML = '';
-                            const script = document.createElement('script');
-                            script.src = './dist/put-stuff-on-website.js';
-                            document.getElementById('scripts').appendChild(script);
-                            break;
-                        }
-                    }
-                }
-            });
+        <script type="text/javascript">
+            var rotation = 0;
+            setInterval(function() {
+                rotation = rotation + 10;
+                document.getElementById('head').style.transform="rotate(" + rotation + "deg)";
+            }, 150);
         </script>
-        <script src='./dist/code-block.js'></script>
     </body>
 </html>
