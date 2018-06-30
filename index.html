@@ -51,13 +51,25 @@
             </div>
             <img src="./dead.gif" style="position: fixed;bottom: 5%;right:40%;" />
             <img src="./head.png" style="position: fixed;bottom: 0;right:40px;" id="head"/>
+            <img src="./jetsetter.png" style="position: absolute; top: 0; right: -1000px;" id="plane"/>
         </div>
         <script type="text/javascript">
             var rotation = 0;
+            var right = -1000;
             setInterval(function() {
                 rotation = rotation + 10;
                 document.getElementById('head').style.transform="rotate(" + rotation + "deg)";
             }, 150);
+            requestAnimationFrame(movePlane);
+            function movePlane() {
+                var plane = document.getElementById('plane');
+                if (-300 > plane.offsetLeft) {
+                    right = -1000;
+                }
+                right = right + 5;
+                plane.style.right = `${right}px`;
+                requestAnimationFrame(movePlane);
+            }
         </script>
     </body>
 </html>
