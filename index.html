@@ -5,34 +5,53 @@
         <title>conor hastings</title>
         <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
         <style>
-            .project-list li a {
-                color: #51074a;
+            a {
+                color: #000;
             }
-            .project-list li a:visited {
-                color: #31698a;
-            }
+             a:visited {
+                color: #000;
+            } 
         </style>
     </head>
 
-    <body style='background-image:url("./background.png")'>
+    <body style='background-image:url("./florist.jpg")'>
         <div id='app'>
             <div style="font-family: 'VT323', cursive;">
-                <h1 style='background:mistyrose;color:cadetblue;'>
-                    hi, i am conor hastings and this is my personal internet landing page. i hope you like it, if you don't, that's ok too!                
-                    <sub style='background: LightCoral;color:mistyrose;font-size:22px'>fun fact, i love brands</sub>
+                       <h1 style='background:mistyrose;color:cadetblue; font-size:22px;'>
+hi i'm conor hastings and this is my personal internet landing page. i hope you like it, if you don't, that's ok too!                
+                    <sub style='background: LightCoral;color:mistyrose;font-size:18px'>fun fact, i like flowers</sub>
 
                 </h1>
                 <div>
-                    <div style="background: Gainsboro">
-                        <a href="http://github.com/conorhastings">github</a> | 
-                        <a href="http://twitter.com/stillconor">twitter</a>
+                    <div style='background:mistyrose;color:cadetblue;opacity: 0.9'>
+                        <pre>
+    just trying to figure out what's real
+    also
+    i want to be
+    a sad florist
+    it is in the domain
+    they don't allow question marks
+    but just so you know it's inspirational 
+    not factual
+    apologies
+    do you ever try to see if your florist is sad
+    you know like even if externally
+    i don't
+    i bet u don't either
+                        </pre>
                     </div>
-                    <p style='background: navy;color:powderblue;'>
+                </div>
+                <div>
+                    <div style="background: Gainsboro">
+                        <a href="http://github.com/conorhastings" class="project-list">github</a> | 
+                        <a href="http://twitter.com/stillconor" class="project-list">twitter</a>
+                    </div>
+                    <p style='background: navy;color:powderblue;font-size: 1px;'>
                         (imagine the twitter link has a bird icon and the github link has the github picture thingy, i don't feel like finding the images and putting them in, 
                         imagination is a key skill in life and you should learn it now if you have not. you're welcome.)
                     </p>
                     <h2 style="background: MediumAquamarine; color:azure;">some things i've worked on that i like, you might too!</h2>
-                    <ul style="background: rgba(255,182,193,0.97);" class="project-list">
+                    <ul style="background:rgba(255,182,193,0.73);" class="project-list">
                         <li><a href="https://github.com/conorhastings/redux-test-recorder">redux test recorder</a> <a href="http://conor.rodeo/redux-test-recorder/demo/">(demo)</a><a href="http://conor.rodeo/todo-mvc-redux-test-recorder">(another demo)</a><a href="https://www.youtube.com/watch?v=It7jU4uKxSk">(my talk at react europe)</a></li>
                         <li><a href="https://github.com/conorhastings/react-syntax-highlighter">react syntax highlighter</a> <a href="http://conor.rodeo/react-syntax-highlighter/demo/">(demo)</a></li>
                         <li><a href="https://github.com/conorhastings/react-native-syntax-highlighter">react native syntax highlighter</a></li>
@@ -43,7 +62,7 @@
                         <li><a href="https://github.com/conorhastings/routeql">routeql</a> <a href="https://example-iwcszelmgp.now.sh/">(demo)</a></li>
                     </ul>
                     <h2 style="background: MediumAquamarine; color:azure;">i write blog posts or speak some times too, this is a list of them</h2>
-                    <ul style="background: rgba(255,182,193,0.97);" class="project-list">
+                    <ul style="background: rgba(255,182,193,0.73);" class="project-list">
                         <li><a href="https://codeburst.io/how-babel-helped-to-save-710kb-from-a-production-bundle-and-how-its-so-much-more-than-esnext-e3ff82a5b447">using babel as more than just an esnext compiler</a></li>
                         <li><a href="https://codeburst.io/testing-the-schema-compliance-of-an-applications-graphql-queries-why-not-do-it-automatically-bf31d1b8dc35">automatically testing schema compliance of an applications graphql queries</a></li>
                         <li><a href="https://codeburst.io/using-babel-and-webpack-for-ahead-of-time-decision-making-for-branched-components-6f675ec87db1">making render decisions for branched components at build time</a></li>
@@ -52,27 +71,7 @@
                     </ul>
                 </div>
             </div>
-            <img src="./dead.gif" style="position: fixed;bottom: 5%;right:40%;" />
-            <img src="./head.png" style="position: fixed;bottom: 0;right:40px;" id="head"/>
-            <img src="./jetsetter.png" style="position: absolute; top: 0; right: -1000px;" id="plane"/>
+            <img src="./dead.gif" style="position: absolute;bottom: 20px;right: 10px;" />
         </div>
-        <script type="text/javascript">
-            var rotation = 0;
-            var right = -1000;
-            setInterval(function() {
-                rotation = rotation + 10;
-                document.getElementById('head').style.transform="rotate(" + rotation + "deg)";
-            }, 150);
-            requestAnimationFrame(movePlane);
-            function movePlane() {
-                var plane = document.getElementById('plane');
-                if (-300 > plane.offsetLeft) {
-                    right = -1000;
-                }
-                right = right + 5;
-                plane.style.right = `${right}px`;
-                requestAnimationFrame(movePlane);
-            }
-        </script>
     </body>
 </html>
